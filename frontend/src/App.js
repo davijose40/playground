@@ -9,6 +9,7 @@ import Questions from './Questions/Questions';
 import Callback from './Callback';
 import NewQuestion from './NewQuestion/NewQuestion';
 import SecuredRoute from './SecuredRoute/SecuredRoute';
+import Playground from './Pusher/playground';
 
 class App extends Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class App extends Component {
       <div>
         <NavBar />
         <Route exact path="/" component={Questions} />
+        <Route exact path="/playground" component={Playground} />
         <Route exact path="/question/:questionId" component={Question} />
         <Route exact path="/callback" component={Callback} />
         <SecuredRoute
