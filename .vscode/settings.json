@@ -1,0 +1,7 @@
+{
+  "window.zoomLevel": 0.5,
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "prettier.eslintIntegration": true
+}
