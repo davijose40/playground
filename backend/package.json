@@ -2,6 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start" : "node src/index",
+    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
+  },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",

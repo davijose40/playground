@@ -42,7 +42,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // log HTTP requests
 app.use(morgan("combined"));
 
-// retrieve all questions
+// login
 app.get("/", (req, res) => {
   const qs = questions.map(q => ({
     id: q.id,
@@ -53,8 +53,19 @@ app.get("/", (req, res) => {
   res.send(qs);
 });
 
+// retrieve all questions
+app.get("/forum", (req, res) => {
+  const qs = questions.map(q => ({
+    id: q.id,
+    title: q.title,
+    description: q.description,
+    answers: q.answers.length
+  }));
+  res.send(qs);
+});
+
 // get a specific question
-app.get("/:id", (req, res) => {
+app.get("/forum/:id", (req, res) => {
   const question = questions.filter(q => q.id === parseInt(req.params.id));
   if (question.length > 1) return res.status(500).send();
   if (question.length === 0) return res.status(404).send();
@@ -85,7 +96,7 @@ const checkJwt = jwt({
 });
 
 // insert a new question
-app.post("/", checkJwt, (req, res) => {
+app.post("/forum", checkJwt, (req, res) => {
   const { title, description } = req.body;
   const newQuestion = {
     id: questions.length + 1,
@@ -99,7 +110,7 @@ app.post("/", checkJwt, (req, res) => {
 });
 
 // insert a new answer to a question
-app.post("/answer/:id", checkJwt, (req, res) => {
+app.post("/answer/forum/:id", checkJwt, (req, res) => {
   const { answer } = req.body;
 
   const question = questions.filter(q => q.id === parseInt(req.params.id));
