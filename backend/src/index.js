@@ -9,6 +9,20 @@ const morgan = require("morgan");
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
 
+require('dotenv').config({ path: '.env'});
+
+//Pusher package
+const Pusher = require('pusher');
+
+// Pusher config
+const pusher = new Pusher({
+  appId: process.env.PUSHER_APP_ID,
+  key: process.env.PUSHER_APP_KEY,
+  secret: process.env.PUSHER_APP_SECRET,
+  cluster: process.env.PUSHER_APP_CLUSTER,
+  useTLS: true,
+});
+
 // define the Express app
 const app = express();
 
@@ -18,11 +32,12 @@ const questions = [];
 // enhance your app security with Helmet
 app.use(helmet());
 
-// use bodyParser to parse application/json content-type
-app.use(bodyParser.json());
-
 // enable all CORS requests
 app.use(cors());
+
+// use bodyParser to parse application/json content-type
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // log HTTP requests
 app.use(morgan("combined"));
@@ -45,6 +60,14 @@ app.get("/:id", (req, res) => {
   if (question.length === 0) return res.status(404).send();
   res.send(question[0]);
 });
+
+//sync playground Pusher server
+app.post('/update-editor', (req, res) => {
+  pusher.trigger('editor', 'code-update', {
+    ...req.body,
+  });
+  res.status(200).send('OK');
+})
 
 // authentication
 const checkJwt = jwt({
@@ -92,6 +115,7 @@ app.post("/answer/:id", checkJwt, (req, res) => {
 });
 
 // start the server, change port
-app.listen(8081, () => {
-  console.log("listening on port 8081");
+app.set('port', process.env.PORT || 5000);
+const server = app.listen(app.get('port'), () => {
+  console.log(`Express running -> PORT ${server.address().port}`);
 });
