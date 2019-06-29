@@ -13,15 +13,18 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="jumbotron">
-        <h1 className="display-3">Pair=Programming WebSite</h1>
-        <p className="lead">
-          Pair Programming, aprenda a programar fazendo desafios junto com um parceiro e se torne um
-          desenvolvedor profissional hoje mesmo.
+      <div className="jumbotron text-center">
+        <h1 className="display-3">Pair=Programming</h1>
+        <p className="lead text-secondary">
+          Website Pair Programming, aprenda a programar fazendo desafios junto com um parceiro e se
+          torne um desenvolvedor profissional hoje mesmo.
         </p>
-        <small>Faça seu login e começe a construir seu futuro.</small>
+        <small className="text-secondary">Faça seu login e começe a construir seu futuro.</small>
+        <br />
+        <br />
+        <br />
         <Link to="/playground">
-          <button type="button" className="btn btn-info">
+          <button type="button" className="btn btn-success">
             Playground
           </button>
         </Link>

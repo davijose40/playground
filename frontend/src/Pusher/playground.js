@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-shadow */
 /* eslint-disable react/no-string-refs */
 // client/src/App.js
 
@@ -13,8 +15,6 @@ import 'codemirror/theme/material.css';
 import 'codemirror/mode/htmlmixed/htmlmixed';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/javascript/javascript';
-
-import '../static/playground.scss';
 
 class Playground extends Component {
   constructor() {
@@ -113,7 +113,8 @@ class Playground extends Component {
                 mode: 'htmlmixed',
                 ...codeMirrorOptions,
               }}
-              onBeforeChange={(editor, data, html) => { // eslint-disable-line
+              onBeforeChange={(editor, data, html) => {
+                // eslint-disable-line
                 // eslint-disable-line
                 this.setState({ html }, () => this.syncUpdates());
               }}
@@ -127,7 +128,8 @@ class Playground extends Component {
                 mode: 'css',
                 ...codeMirrorOptions,
               }}
-              onBeforeChange={(editor, data, css) => { // eslint-disable-line
+              onBeforeChange={(editor, data, css) => {
+                // eslint-disable-line
                 // eslint-disable-line
                 this.setState({ css }, () => this.syncUpdates());
               }}
@@ -141,7 +143,8 @@ class Playground extends Component {
                 mode: 'javascript',
                 ...codeMirrorOptions,
               }}
-              onBeforeChange={(editor, data, js) => { // eslint-disable-line
+              onBeforeChange={(editor, data, js) => {
+                // eslint-disable-line
                 // eslint-disable-line
                 this.setState({ js }, () => this.syncUpdates());
               }}

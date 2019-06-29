@@ -14,8 +14,14 @@ function NavBar(props) {
       <Link className="navbar-brand" to="/">
         Pair=Programming
       </Link>
-      <Link className="navbar-brand" to="/playground" style={{ marginLeft: '20px' }}>
+      <Link className="navbar-nav mr-1" to="/playground" style={{ marginLeft: '20px' }}>
         PlayGround
+      </Link>
+      <Link className="navbar-nav mr-1" to="/tasks">
+        Tasks
+      </Link>
+      <Link className="navbar-nav mr-1" to="/forum">
+        Forum
       </Link>
       {!auth0Client.isAuthenticated() && (
         <button type="button" className="btn btn-dark" onClick={auth0Client.signIn}>

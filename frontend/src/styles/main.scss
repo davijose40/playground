@@ -1,0 +1,11 @@
+@import "./shared/fonts";
+@import "./shared/colors";
+@import "./shared/playground";
+@import "./shared/home";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", "Helvetica";
+}

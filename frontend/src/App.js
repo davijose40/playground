@@ -1,9 +1,11 @@
+/* eslint-disable no-console */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import auth0Client from './Auth';
-import NavBar from './NavBar/NavBar';
+// import NavBar from './NavBar/NavBar';
+import NavBarTest from './NavBar/NavBarTest';
 import Home from './Home/Home';
 import Question from './Question/Question';
 import Questions from './Questions/Questions';
@@ -11,6 +13,9 @@ import Callback from './Callback';
 import NewQuestion from './NewQuestion/NewQuestion';
 import SecuredRoute from './SecuredRoute/SecuredRoute';
 import Playground from './Pusher/playground';
+
+// styles main.scss
+import './styles/main.scss';
 
 class App extends Component {
   constructor(props) {
@@ -38,7 +43,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBarTest />
         <Route exact path="/" component={Home} />
         <Route exact path="/forum" component={Questions} />
         <Route exact path="/playground" component={Playground} />
