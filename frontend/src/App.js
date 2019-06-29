@@ -6,6 +6,7 @@ import { Route, withRouter } from 'react-router-dom';
 import auth0Client from './Auth';
 // import NavBar from './NavBar/NavBar';
 import NavBarTest from './NavBar/NavBarTest';
+import Footer from './Footer/Footer';
 import Home from './Home/Home';
 import Question from './Question/Question';
 import Questions from './Questions/Questions';
@@ -54,6 +55,7 @@ class App extends Component {
           component={NewQuestion}
           checkingSession={this.state.checkingSession}
         />
+        <Footer />
       </div>
     );
   }

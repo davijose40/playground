@@ -1,5 +1,5 @@
-$main-color-blue: #0977C0;
-$main-color-red: 'red';
+$main-color-blue: #0977c0;
+$main-color-red: "red";
 
 $navbar-orange: #dba919;
 $base-page-white: #ecedee;
@@ -16,16 +16,32 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$primary: #18BC9C !default;
-$secondary: #2C3E50 !default;
+$green-100: #acdf87 !default;
+$green-200: #A4DE02 !default;
+$green-300: #68BB59 !default;
+$green-400: #76BA1B !default;
+$green-500: #4C9A2A !default;
+$green-600: #4C9A2A !default;
+$green-700: #28a745 !default;
+$green-900: #1E5631 !default;
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #0085A1 !default;
-$cyan:    #17a2b8 !default;
+//diamond green
+$green-d-100: #13eba2 !default;
+$green-d-200: #3bfeb8 !default;
+$green-d-300: #0ad48b !default;
+$green-d-400: #05ac72 !default;
+$green-d-500: #056644 !default;
+
+$primary: #18bc9c !default;
+$secondary: #2c3e50 !default;
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+
+$teal: #0085a1 !default;
+$cyan: #17a2b8 !default;
