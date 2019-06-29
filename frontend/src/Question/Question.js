@@ -23,7 +23,7 @@ class Question extends Component {
     const {
       match: { params },
     } = this.props;
-    const question = (await axios.get(`http://localhost:8081/${params.questionId}`)).data;
+    const question = (await axios.get(`http://localhost:5000/${params.questionId}`)).data;
     this.setState({
       question,
     });
@@ -31,7 +31,7 @@ class Question extends Component {
 
   async submitAnswer(answer) {
     await axios.post(
-      `http://localhost:8081/answer/${this.state.question.id}`,
+      `http://localhost:5000/answer/${this.state.question.id}`,
       {
         answer,
       },

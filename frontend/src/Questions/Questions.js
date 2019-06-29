@@ -25,10 +25,10 @@ class Questions extends Component {
         <div className="row">
           <Link to="/new-question">
             <div className="card text-white bg-secondary mb-3">
-              <div className="card-header">Need help? Ask here!</div>
+              <div className="card-header">Need help? Pergunte aqui!</div>
               <div className="card-body">
-                <h4 className="card-title">+ New Question</h4>
-                <p className="card-text">Do not worry. Help is on the way!</p>
+                <h4 className="card-title">+ Nova Questão</h4>
+                <p className="card-text">Não se preocupe. Resposta está a caminho!</p>
               </div>
             </div>
           </Link>
@@ -39,7 +39,7 @@ class Questions extends Component {
                 <Link to={`/question/${question.id}`}>
                   <div className="card text-white bg-success mb-3">
                     <div className="card-header">
-                      Answers:
+                      Respostas:
                       {question.answers}
                     </div>
                     <div className="card-body">

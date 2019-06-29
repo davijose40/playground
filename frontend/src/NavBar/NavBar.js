@@ -12,7 +12,7 @@ function NavBar(props) {
   return (
     <nav className="navbar navbar-dark bg-primary fixed-top">
       <Link className="navbar-brand" to="/">
-        Q&App
+        Pair=Programming
       </Link>
       <Link className="navbar-brand" to="/playground" style={{ marginLeft: '20px' }}>
         PlayGround
