@@ -16,7 +16,7 @@ import SecuredRoute from './SecuredRoute/SecuredRoute';
 import Playground from './Pusher/playground';
 
 // styles main.scss
-import './styles/main.scss';
+import './styles/App.scss';
 
 class App extends Component {
   constructor(props) {
