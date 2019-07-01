@@ -22,3 +22,6 @@ yarn-error.log*
 frontend/yarn-error.log*
 */package-lock.json
 
+// exclude server.js
+server.js
+
