@@ -19,7 +19,7 @@ class Home extends Component {
           Website Pair Programming, aprenda a programar fazendo desafios junto com um parceiro e se
           torne um desenvolvedor profissional hoje mesmo.
         </p>
-        <small className="text-secondary">Faça seu login e começe a construir seu futuro.</small>
+        <small>Faça seu login e começe a construir seu futuro.</small>
         <br />
         <br />
         <br />

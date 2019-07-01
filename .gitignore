@@ -1,24 +1,24 @@
 #backend files
 
-backend/node_modules
+node_modules
 frontend/node_modules
 
 # production
-backend/build
+build
 frontend/build
 
 # misc
-backend/.DS_Store
+.DS_Store
 frontend/.DS_Store
-backend/.env
+.env
 frontend/.env.development.local
 frontend/.env.test.local
-backend/.env.production.local
+.env.production.local
 frontend/.env.production.local
 
 /npm-debug.log*
 */yarn-debug.log*
-backend/yarn-error.log*
+yarn-error.log*
 frontend/yarn-error.log*
 */package-lock.json
 

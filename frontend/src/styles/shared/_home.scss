@@ -1,10 +1,10 @@
 .jumbotron {
-  background-color: rgba(24,188,156,0.180);
+  background-color: rgba(24, 188, 156, 0.18);
   margin-top: 4.5rem;
 
   h1 {
     font-weight: lighter;
-    letter-spacing: .5rem;
+    letter-spacing: 0.3rem;
     color: $gray-600;
   }
 
@@ -16,4 +16,7 @@
     margin-top: 2rem;
   }
 
+  small {
+    font-weight: lighter;
+  }
 }
